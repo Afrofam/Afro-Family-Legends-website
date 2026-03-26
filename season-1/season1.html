@@ -1385,8 +1385,7 @@
       @media (max-width: 720px) {
         .topbar-inner,
         .section-inner,
-        .footer-inner,
-        .hero-grid {
+        .footer-inner {
           width: min(calc(100% - 1.25rem), var(--max-width));
         }
 
@@ -1416,6 +1415,15 @@
 
         .hero {
           padding: 3.4rem 0 2.5rem;
+          overflow-x: auto;
+          overflow-y: visible;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .hero-grid {
+          width: max-content;
+          min-width: 680px;
+          padding: 0 0.625rem 0.5rem;
         }
 
         .hero-copy h1 {
@@ -1556,6 +1564,7 @@
 
         .hero-grid {
           gap: 1.25rem;
+          min-width: 620px;
         }
 
         .arena-core {
@@ -1563,7 +1572,10 @@
         }
 
         .node {
-          display: none;
+          width: 64px;
+          padding: 0.38rem 0.3rem;
+          font-size: 0.54rem;
+          border-radius: 12px;
         }
 
         .panel-bottom,
