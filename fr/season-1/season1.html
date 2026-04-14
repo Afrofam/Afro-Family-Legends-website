@@ -1,0 +1,2372 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AFL Season 1 | French</title>
+    <meta
+      name="description"
+      content="AFL Season 1 is the dedicated African League showcase page covering the tournament's milestone, representation, barriers, impact, and future vision."
+    />
+    <link rel="icon" type="image/png" href="../favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #040406;
+        --bg-soft: #12070b;
+        --panel: rgba(24, 8, 12, 0.8);
+        --panel-strong: rgba(18, 7, 11, 0.94);
+        --border: rgba(255, 95, 95, 0.22);
+        --text: #edf3ff;
+        --muted: #c7b7bf;
+        --accent: #ff334f;
+        --accent-2: #ff6b3d;
+        --accent-3: #ffb347;
+        --danger: #ff4d6d;
+        --shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+        --max-width: 1180px;
+        --pattern: linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0.03) 0,
+            rgba(255, 255, 255, 0.03) 1px,
+            transparent 1px,
+            transparent 22px
+          ),
+          linear-gradient(
+            60deg,
+            rgba(255, 255, 255, 0.025) 0,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px,
+            transparent 24px
+          );
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Space Grotesk", sans-serif;
+        color: var(--text);
+        background: radial-gradient(
+            circle at top left,
+            rgba(255, 51, 79, 0.28),
+            transparent 28%
+          ),
+          radial-gradient(
+            circle at top right,
+            rgba(255, 107, 61, 0.2),
+            transparent 30%
+          ),
+          radial-gradient(
+            circle at 50% 120%,
+            rgba(255, 179, 71, 0.1),
+            transparent 35%
+          ),
+          var(--bg);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.28;
+        background-image: var(--pattern);
+        mask-image: radial-gradient(
+          circle at center,
+          black 40%,
+          transparent 92%
+        );
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        backdrop-filter: blur(18px);
+        background: rgba(5, 8, 18, 0.72);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .topbar-inner,
+      .section-inner,
+      .footer-inner {
+        width: min(calc(100% - 2rem), var(--max-width));
+        margin: 0 auto;
+      }
+
+      .topbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        min-height: 74px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+        font-family: "Oxanium", sans-serif;
+        letter-spacing: 0.06em;
+      }
+
+      .brand-mark {
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        color: #fff;
+        background: linear-gradient(
+          145deg,
+          rgba(123, 92, 255, 0.95),
+          rgba(36, 216, 255, 0.9)
+        );
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08),
+          0 0 36px rgba(123, 92, 255, 0.35);
+      }
+
+      .brand-text strong {
+        display: block;
+        font-size: 1rem;
+      }
+
+      .brand-text span {
+        display: block;
+        color: var(--muted);
+        font-size: 0.74rem;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .topbar-actions {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .lang-switch {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.35rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .lang-link {
+        min-width: 42px;
+        padding: 0.45rem 0.7rem;
+        border-radius: 999px;
+        text-align: center;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .lang-link.is-active {
+        color: var(--text);
+        background: linear-gradient(120deg, rgba(255, 51, 79, 0.95), rgba(255, 107, 61, 0.85));
+        box-shadow: 0 0 22px rgba(255, 51, 79, 0.22);
+      }
+
+      .nav a {
+        position: relative;
+        padding-bottom: 0.2rem;
+      }
+
+      .nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -0.1rem;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 180ms ease;
+      }
+
+      .nav a:hover::after,
+      .nav a:focus-visible::after {
+        transform: scaleX(1);
+      }
+
+      .hero {
+        position: relative;
+        padding: 5.5rem 0 4rem;
+        isolation: isolate;
+        overflow: hidden;
+      }
+
+      .hero::before,
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto;
+        border-radius: 999px;
+        filter: blur(18px);
+        opacity: 0.5;
+        z-index: -1;
+      }
+
+      .hero::before {
+        width: 360px;
+        height: 360px;
+        top: 2rem;
+        right: -5rem;
+        background: radial-gradient(
+          circle,
+          rgba(123, 92, 255, 0.45),
+          transparent 70%
+        );
+        animation: floatGlow 8s ease-in-out infinite;
+      }
+
+      .hero::after {
+        width: 320px;
+        height: 320px;
+        left: -5rem;
+        bottom: 1rem;
+        background: radial-gradient(
+          circle,
+          rgba(36, 216, 255, 0.3),
+          transparent 70%
+        );
+        animation: floatGlow 10s ease-in-out infinite reverse;
+      }
+
+      .hero-grid {
+        width: min(calc(100% - 2rem), var(--max-width));
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        align-items: center;
+        gap: 2.2rem;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.55rem 0.9rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 999px;
+        color: #dce4ff;
+        font-size: 0.84rem;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--accent-3), var(--accent-2));
+        box-shadow: 0 0 16px rgba(60, 255, 151, 0.8);
+      }
+
+      .hero-copy h1,
+      .section-copy h2,
+      .cards h3,
+      .panel h3,
+      .cta-banner h2 {
+        margin: 0;
+        font-family: "Oxanium", sans-serif;
+        line-height: 0.95;
+        letter-spacing: 0.01em;
+      }
+
+      .hero-copy h1 {
+        margin-top: 1.35rem;
+        font-size: clamp(3.4rem, 8vw, 6.4rem);
+        text-transform: uppercase;
+      }
+
+      .hero-copy h1 span {
+        display: block;
+        background: linear-gradient(
+          90deg,
+          #ffffff 0%,
+          #cfd9ff 45%,
+          #77fcff 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .hero-copy .subheadline {
+        max-width: 44rem;
+        margin: 1.2rem 0 1rem;
+        font-size: 1.12rem;
+        color: #d8e0f6;
+      }
+
+      .tagline {
+        color: var(--accent-2);
+        text-transform: uppercase;
+        letter-spacing: 0.24em;
+        font-size: 0.82rem;
+      }
+
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 1.8rem;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 54px;
+        padding: 0.9rem 1.4rem;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        font-weight: 700;
+        transition: transform 180ms ease, border-color 180ms ease,
+          box-shadow 180ms ease, background 180ms ease;
+      }
+
+      .button:hover,
+      .button:focus-visible,
+      .card:hover,
+      .country:hover,
+      .impact-card:hover,
+      .future-card:hover,
+      .visual-panel:hover {
+        transform: translateY(-4px);
+        border-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.3);
+      }
+
+      .button-primary {
+        background: linear-gradient(
+          120deg,
+          rgba(123, 92, 255, 0.92),
+          rgba(36, 216, 255, 0.92)
+        );
+        box-shadow: 0 0 28px rgba(123, 92, 255, 0.32);
+      }
+
+      .button-secondary {
+        background: rgba(255, 255, 255, 0.03);
+        color: #f5f8ff;
+      }
+
+      .hero-panel {
+        position: relative;
+        border: 1px solid var(--border);
+        border-radius: 28px;
+        background: linear-gradient(
+          180deg,
+          rgba(11, 18, 37, 0.84),
+          rgba(6, 9, 19, 0.95)
+        );
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        min-height: 560px;
+      }
+
+      .hero-panel::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+            circle at 20% 30%,
+            rgba(123, 92, 255, 0.24),
+            transparent 28%
+          ),
+          radial-gradient(
+            circle at 80% 18%,
+            rgba(36, 216, 255, 0.22),
+            transparent 26%
+          ),
+          linear-gradient(transparent 0 95%, rgba(255, 255, 255, 0.06) 95% 100%),
+          repeating-linear-gradient(
+            90deg,
+            transparent 0 9.5%,
+            rgba(255, 255, 255, 0.035) 9.5% 10%
+          );
+        opacity: 0.95;
+      }
+
+      .hero-panel-inner {
+        position: relative;
+        min-height: 560px;
+        padding: 1.4rem;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        gap: 1rem;
+      }
+
+      .panel-top {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        font-size: 0.86rem;
+        color: #d9e3ff;
+      }
+
+      .panel-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.45rem 0.75rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .panel-chip::before {
+        content: "";
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background: var(--accent-3);
+        box-shadow: 0 0 14px rgba(60, 255, 151, 0.8);
+      }
+
+      .arena {
+        position: relative;
+        display: grid;
+        place-items: center;
+      }
+
+      .arena-core {
+        position: relative;
+        width: min(100%, 350px);
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: radial-gradient(
+            circle,
+            rgba(8, 15, 32, 0.2) 0 38%,
+            transparent 38% 100%
+          ),
+          radial-gradient(circle, rgba(36, 216, 255, 0.32), transparent 58%),
+          radial-gradient(circle, rgba(123, 92, 255, 0.24), transparent 66%);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: inset 0 0 55px rgba(36, 216, 255, 0.12),
+          0 0 65px rgba(123, 92, 255, 0.2);
+        animation: pulseArena 8s linear infinite;
+      }
+
+      .arena-core::before,
+      .arena-core::after {
+        content: "";
+        position: absolute;
+        inset: 12%;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .arena-core::after {
+        inset: 25%;
+        border-color: rgba(36, 216, 255, 0.24);
+      }
+
+      .node {
+        position: absolute;
+        width: 94px;
+        padding: 0.65rem;
+        border-radius: 18px;
+        text-align: center;
+        font-size: 0.78rem;
+        font-weight: 700;
+        background: rgba(5, 9, 20, 0.88);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+        backdrop-filter: blur(12px);
+      }
+
+      .node:nth-child(2) {
+        top: 7%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .node:nth-child(3) {
+        top: 30%;
+        right: 0;
+      }
+      .node:nth-child(4) {
+        bottom: 16%;
+        right: 10%;
+      }
+      .node:nth-child(5) {
+        bottom: 10%;
+        left: 7%;
+      }
+      .node:nth-child(6) {
+        top: 33%;
+        left: 0;
+      }
+
+      .panel-bottom {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.9rem;
+      }
+
+      .panel-stat {
+        padding: 0.95rem;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.045);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .panel-stat strong,
+      .stat-card strong,
+      .impact-card strong {
+        display: block;
+        font-family: "Oxanium", sans-serif;
+        font-size: 1.45rem;
+        line-height: 1;
+        margin-bottom: 0.35rem;
+      }
+
+      section {
+        padding: 1.5rem 0 5rem;
+        position: relative;
+      }
+
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .section-copy {
+        max-width: 44rem;
+      }
+
+      .section-kicker {
+        color: var(--accent-2);
+        font-size: 0.84rem;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        margin-bottom: 0.75rem;
+      }
+
+      .section-copy h2 {
+        font-size: clamp(2.1rem, 5vw, 3.7rem);
+        text-transform: uppercase;
+      }
+
+      .section-copy p {
+        color: var(--muted);
+        font-size: 1.02rem;
+        margin-top: 1rem;
+      }
+
+      .badge {
+        white-space: nowrap;
+        padding: 0.6rem 0.9rem;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: #d5def9;
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .cards,
+      .stats-grid,
+      .impact-grid,
+      .future-grid,
+      .footer-grid {
+        display: grid;
+        gap: 1.1rem;
+      }
+
+      .cards {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+
+      .card,
+      .stat-card,
+      .impact-card,
+      .future-card,
+      .visual-panel,
+      .cta-banner {
+        position: relative;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: var(--panel);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        transition: transform 220ms ease, border-color 220ms ease,
+          box-shadow 220ms ease;
+      }
+
+      .card::before,
+      .stat-card::before,
+      .impact-card::before,
+      .future-card::before,
+      .visual-panel::before,
+      .cta-banner::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          140deg,
+          rgba(123, 92, 255, 0.1),
+          transparent 32%,
+          rgba(36, 216, 255, 0.08)
+        );
+        pointer-events: none;
+      }
+
+      .card {
+        padding: 1.35rem;
+        min-height: 220px;
+      }
+
+      .icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 16px;
+        display: grid;
+        place-items: center;
+        font-family: "Oxanium", sans-serif;
+        font-weight: 700;
+        margin-bottom: 1.1rem;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--accent-2);
+        box-shadow: 0 0 24px rgba(36, 216, 255, 0.12);
+      }
+
+      .card h3,
+      .impact-card h3,
+      .future-card h3,
+      .visual-panel h3 {
+        font-size: 1.1rem;
+        line-height: 1.1;
+        margin-bottom: 0.7rem;
+        text-transform: uppercase;
+      }
+
+      .card p,
+      .impact-card p,
+      .future-card p,
+      .visual-panel p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .season-layout,
+      .representation-layout,
+      .barrier-layout,
+      .vision-layout {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 1.2rem;
+        align-items: stretch;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .stat-card {
+        padding: 1.5rem;
+        min-height: 180px;
+      }
+
+      .stat-card span {
+        display: block;
+        color: #dbe5ff;
+        font-size: 0.92rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-top: 0.5rem;
+      }
+
+      .visual-panel {
+        padding: 1.4rem;
+        background: linear-gradient(
+          180deg,
+          rgba(9, 14, 29, 0.92),
+          rgba(7, 10, 21, 0.98)
+        );
+      }
+
+      .visual-panel .visual-tag {
+        display: inline-flex;
+        margin-bottom: 1rem;
+        padding: 0.5rem 0.8rem;
+        border-radius: 999px;
+        color: #d2ddff;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+      }
+
+      .server-map {
+        margin-top: 1.2rem;
+        padding: 1rem;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: radial-gradient(
+            circle at 50% 50%,
+            rgba(36, 216, 255, 0.12),
+            transparent 40%
+          ),
+          rgba(255, 255, 255, 0.02);
+      }
+
+      .server-track {
+        height: 220px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 18px;
+        background: linear-gradient(
+            rgba(255, 255, 255, 0.03) 1px,
+            transparent 1px
+          ),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(
+            180deg,
+            rgba(123, 92, 255, 0.06),
+            rgba(36, 216, 255, 0.05)
+          );
+        background-size: 32px 32px, 32px 32px, auto;
+      }
+
+      .server-line {
+        position: absolute;
+        height: 3px;
+        left: 9%;
+        right: 9%;
+        top: 50%;
+        transform: translateY(-50%);
+        background: linear-gradient(
+          90deg,
+          var(--accent),
+          var(--accent-2),
+          var(--accent-3)
+        );
+        box-shadow: 0 0 18px rgba(36, 216, 255, 0.5);
+      }
+
+      .server-point {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: white;
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.08),
+          0 0 18px rgba(36, 216, 255, 0.5);
+        top: calc(50% - 7px);
+      }
+
+      .server-point:nth-child(2) {
+        left: 12%;
+        background: var(--accent-3);
+      }
+      .server-point:nth-child(3) {
+        left: 39%;
+        background: var(--accent-2);
+      }
+      .server-point:nth-child(4) {
+        left: 67%;
+        background: var(--danger);
+      }
+      .server-point:nth-child(5) {
+        right: 11%;
+        background: var(--accent);
+      }
+
+      .server-labels {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.6rem;
+        margin-top: 1rem;
+        color: #d5def7;
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .map-panel {
+        position: relative;
+        min-height: 100%;
+        padding: 1.4rem;
+      }
+
+      .map {
+        position: relative;
+        margin-top: 1rem;
+        min-height: 420px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: radial-gradient(
+            circle at 25% 30%,
+            rgba(123, 92, 255, 0.2),
+            transparent 28%
+          ),
+          radial-gradient(
+            circle at 68% 62%,
+            rgba(36, 216, 255, 0.18),
+            transparent 32%
+          ),
+          linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.03),
+            rgba(255, 255, 255, 0.01)
+          );
+        overflow: hidden;
+      }
+
+      .africa-shape {
+        position: absolute;
+        inset: 8% 15% 8% 18%;
+        clip-path: polygon(
+          39% 0%,
+          56% 4%,
+          67% 11%,
+          73% 23%,
+          81% 31%,
+          79% 42%,
+          69% 47%,
+          66% 57%,
+          59% 64%,
+          57% 76%,
+          51% 85%,
+          47% 95%,
+          41% 100%,
+          35% 93%,
+          33% 85%,
+          26% 79%,
+          22% 69%,
+          16% 61%,
+          12% 52%,
+          8% 42%,
+          9% 30%,
+          18% 18%,
+          27% 12%,
+          32% 6%
+        );
+        background: linear-gradient(
+          160deg,
+          rgba(60, 255, 151, 0.36),
+          rgba(36, 216, 255, 0.28) 48%,
+          rgba(123, 92, 255, 0.33)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        filter: drop-shadow(0 0 32px rgba(36, 216, 255, 0.22));
+      }
+
+      .map-grid {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            rgba(255, 255, 255, 0.04) 1px,
+            transparent 1px
+          ),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        background-size: 30px 30px;
+        opacity: 0.28;
+      }
+
+      .country-points {
+        position: absolute;
+        inset: 0;
+      }
+
+      .country {
+        position: absolute;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.4rem 0.7rem;
+        border-radius: 999px;
+        background: rgba(5, 10, 22, 0.84);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        font-size: 0.78rem;
+        color: #ecf4ff;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+        transition: transform 180ms ease, border-color 180ms ease;
+      }
+
+      .country::before {
+        content: "";
+        width: 0.52rem;
+        height: 0.52rem;
+        border-radius: 50%;
+        background: linear-gradient(120deg, var(--accent-3), var(--accent-2));
+        box-shadow: 0 0 14px rgba(36, 216, 255, 0.55);
+      }
+
+      .country-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 1.1rem;
+      }
+
+      .country-list span {
+        padding: 0.52rem 0.8rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: #d8e2fb;
+      }
+
+      .barrier-points {
+        margin: 1.3rem 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 0.8rem;
+      }
+
+      .barrier-points li {
+        padding: 1rem 1rem 1rem 1.15rem;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: #dfe8ff;
+        position: relative;
+      }
+
+      .barrier-points li::before {
+        content: "";
+        position: absolute;
+        left: 0.85rem;
+        top: 1.2rem;
+        width: 0.42rem;
+        height: 0.42rem;
+        border-radius: 50%;
+        background: var(--danger);
+        box-shadow: 0 0 16px rgba(255, 110, 138, 0.75);
+      }
+
+      .barrier-points li span {
+        display: block;
+        padding-left: 0.85rem;
+        color: var(--muted);
+        font-size: 0.92rem;
+        margin-top: 0.3rem;
+      }
+
+      .impact-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .impact-card,
+      .future-card {
+        padding: 1.4rem;
+        min-height: 230px;
+      }
+
+      .impact-card strong {
+        color: var(--accent-2);
+      }
+
+      .vision-layout {
+        align-items: start;
+      }
+
+      .future-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .future-card strong {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        margin-bottom: 1rem;
+        font-family: "Oxanium", sans-serif;
+        color: var(--accent-3);
+        font-size: 1rem;
+      }
+
+      .cta-banner {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 1.2rem;
+        align-items: center;
+        padding: 2rem;
+        background: radial-gradient(
+            circle at left center,
+            rgba(123, 92, 255, 0.18),
+            transparent 32%
+          ),
+          radial-gradient(
+            circle at right center,
+            rgba(36, 216, 255, 0.16),
+            transparent 30%
+          ),
+          rgba(9, 14, 29, 0.9);
+      }
+
+      .cta-banner h2 {
+        font-size: clamp(2rem, 4.5vw, 3.6rem);
+        text-transform: uppercase;
+      }
+
+      .cta-banner p {
+        color: var(--muted);
+        max-width: 38rem;
+      }
+
+      footer {
+        padding: 1rem 0 2.5rem;
+      }
+
+      .footer-inner {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding-top: 1.6rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1.4fr repeat(3, 1fr);
+        align-items: start;
+      }
+
+      .footer-column h3 {
+        font-family: "Oxanium", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+      }
+
+      .footer-column p,
+      .footer-column a {
+        color: var(--muted);
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition: opacity 700ms ease, transform 700ms ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .teams-carousel-section {
+        padding: 1.5rem 0 5rem;
+      }
+
+      .teams-carousel-shell {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .teams-stage {
+        position: relative;
+        overflow: hidden;
+        border-radius: 28px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: linear-gradient(
+          180deg,
+          rgba(17, 6, 9, 0.96),
+          rgba(8, 6, 10, 0.98)
+        );
+        box-shadow: var(--shadow);
+        min-height: 520px;
+        touch-action: pan-y;
+      }
+
+      .teams-slide {
+        position: relative;
+        min-height: 520px;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        opacity: 1;
+        transform: translateX(0);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+      .teams-slide.is-changing {
+        opacity: 0;
+        transform: translateX(24px);
+      }
+
+      .teams-slide::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          140deg,
+          rgba(255, 51, 79, 0.14),
+          transparent 34%,
+          rgba(255, 179, 71, 0.08)
+        );
+        pointer-events: none;
+      }
+
+      .teams-image {
+        width: 100%;
+        height: 100%;
+        min-height: 380px;
+        object-fit: contain;
+        object-position: center;
+        display: block;
+        background: rgba(0, 0, 0, 0.28);
+        animation: teamsWiggle 8.5s cubic-bezier(0.37, 0, 0.22, 1) infinite;
+        transform-origin: center center;
+        will-change: transform;
+      }
+
+      .teams-meta {
+        position: relative;
+        padding: 1.4rem 1.4rem 1.6rem;
+        background: linear-gradient(
+          180deg,
+          rgba(8, 12, 24, 0.2),
+          rgba(8, 12, 24, 0.92)
+        );
+      }
+
+      .teams-label {
+        margin: 0 0 0.45rem;
+        color: var(--accent-2);
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+      }
+
+      .teams-name {
+        margin: 0;
+        font-family: "Oxanium", sans-serif;
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .teams-country {
+        margin: 0.65rem 0 0;
+        color: var(--muted);
+        font-size: 1rem;
+      }
+
+      .teams-nav {
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text);
+        font-size: 1.5rem;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        transition:
+          transform 180ms ease,
+          border-color 180ms ease,
+          box-shadow 180ms ease,
+          background 180ms ease;
+      }
+
+      .teams-nav:hover,
+      .teams-nav:focus-visible {
+        transform: translateY(-3px);
+        border-color: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 0 24px rgba(255, 107, 61, 0.18);
+      }
+
+      .champions-section {
+        padding: 0 0 4rem;
+      }
+
+      .champions-panel {
+        position: relative;
+        display: grid;
+        grid-template-columns: 0.92fr 1.08fr;
+        gap: 1.4rem;
+        padding: 1.2rem;
+        border-radius: 30px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        background:
+          radial-gradient(circle at top left, rgba(255, 196, 85, 0.16), transparent 30%),
+          radial-gradient(circle at bottom right, rgba(255, 70, 84, 0.16), transparent 28%),
+          linear-gradient(180deg, rgba(19, 8, 12, 0.96), rgba(8, 6, 10, 0.98));
+        box-shadow: var(--shadow);
+      }
+
+      .champions-panel::before {
+        content: "";
+        position: absolute;
+        inset: 10px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 199, 94, 0.2);
+        pointer-events: none;
+      }
+
+      .champions-panel::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(135deg, rgba(255, 199, 94, 0.08), transparent 34%, rgba(255, 84, 110, 0.08));
+        pointer-events: none;
+      }
+
+      .champions-visual {
+        position: relative;
+        border-radius: 24px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(0, 0, 0, 0.25);
+        box-shadow:
+          inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+          0 18px 50px rgba(0, 0, 0, 0.28);
+      }
+
+      .champions-visual img {
+        width: 100%;
+        height: 100%;
+        min-height: 480px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .champions-copy {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        align-content: center;
+        gap: 1rem;
+        padding: 1.2rem 1rem 1.2rem 0.6rem;
+      }
+
+      .champions-kicker {
+        color: #ffd27a;
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+      }
+
+      .champions-copy h2 {
+        margin: 0;
+        font-family: "Oxanium", sans-serif;
+        font-size: clamp(2.2rem, 5vw, 4rem);
+        line-height: 0.95;
+        text-transform: uppercase;
+      }
+
+      .champions-copy h2 span {
+        display: block;
+        margin-top: 0.35rem;
+        background: linear-gradient(90deg, #fff1c2 0%, #ffc24d 45%, #ff6c55 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .champions-copy p {
+        margin: 0;
+        color: #ddd0d4;
+        font-size: 1.02rem;
+        max-width: 34rem;
+      }
+
+      .champions-highlight {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.9rem;
+        margin-top: 0.4rem;
+      }
+
+      .champions-stat {
+        padding: 1rem;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .champions-stat strong {
+        display: block;
+        margin-bottom: 0.35rem;
+        font-family: "Oxanium", sans-serif;
+        font-size: 1.05rem;
+        color: #fff1c2;
+        text-transform: uppercase;
+      }
+
+      @keyframes floatGlow {
+        0%,
+        100% {
+          transform: translate3d(0, 0, 0);
+        }
+        50% {
+          transform: translate3d(0, 22px, 0);
+        }
+      }
+
+      @keyframes pulseArena {
+        0% {
+          transform: scale(1) rotate(0deg);
+        }
+        50% {
+          transform: scale(1.04) rotate(180deg);
+        }
+        100% {
+          transform: scale(1) rotate(360deg);
+        }
+      }
+
+      @keyframes teamsWiggle {
+        0%,
+        100% {
+          transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+        }
+        20% {
+          transform: translate3d(-2px, 1px, 0) rotate(-0.22deg) scale(1.006);
+        }
+        40% {
+          transform: translate3d(1px, -2px, 0) rotate(0.18deg) scale(1.01);
+        }
+        60% {
+          transform: translate3d(2px, 1px, 0) rotate(0.14deg) scale(1.008);
+        }
+        80% {
+          transform: translate3d(-1px, 2px, 0) rotate(-0.16deg) scale(1.004);
+        }
+      }
+
+      @media (max-width: 1100px) {
+        .hero-grid,
+        .champions-panel,
+        .season-layout,
+        .representation-layout,
+        .barrier-layout,
+        .vision-layout,
+        .cta-banner,
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .cards {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .impact-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .nav {
+          display: none;
+        }
+
+        .topbar-actions {
+          margin-left: auto;
+        }
+
+        .badge {
+          white-space: normal;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .topbar-inner,
+        .section-inner,
+        .footer-inner {
+          width: min(calc(100% - 1.25rem), var(--max-width));
+        }
+
+        .topbar-inner {
+          min-height: 64px;
+        }
+
+        .brand {
+          gap: 0.65rem;
+        }
+
+        .brand-mark {
+          width: 38px;
+          height: 38px;
+          border-radius: 12px;
+          font-size: 0.84rem;
+        }
+
+        .brand-text strong {
+          font-size: 0.92rem;
+        }
+
+        .brand-text span {
+          font-size: 0.64rem;
+          letter-spacing: 0.14em;
+        }
+
+        .lang-switch {
+          gap: 0.2rem;
+          padding: 0.25rem;
+        }
+
+        .lang-link {
+          min-width: 38px;
+          padding: 0.38rem 0.55rem;
+          font-size: 0.72rem;
+        }
+
+        .hero {
+          padding: 3.4rem 0 2.5rem;
+          overflow-x: auto;
+          overflow-y: visible;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .hero-grid {
+          width: max-content;
+          min-width: 680px;
+          padding: 0 0.625rem 0.5rem;
+        }
+
+        .hero-copy h1 {
+          font-size: clamp(2.8rem, 18vw, 4.4rem);
+        }
+
+        .hero-copy .subheadline,
+        .section-copy p,
+        .champions-copy p,
+        .teams-country {
+          font-size: 0.96rem;
+        }
+
+        .eyebrow {
+          font-size: 0.72rem;
+          letter-spacing: 0.14em;
+          padding: 0.48rem 0.72rem;
+        }
+
+        .cards,
+        .stats-grid,
+        .impact-grid,
+        .future-grid,
+        .panel-bottom {
+          grid-template-columns: 1fr;
+        }
+
+        .section-head {
+          align-items: start;
+          flex-direction: column;
+          margin-bottom: 1.35rem;
+        }
+
+        .hero-panel {
+          min-height: auto;
+          border-radius: 22px;
+        }
+
+        .hero-panel-inner {
+          min-height: auto;
+          padding: 1rem;
+        }
+
+        .node {
+          width: 82px;
+          font-size: 0.7rem;
+        }
+
+        .panel-top {
+          flex-wrap: wrap;
+        }
+
+        .panel-chip {
+          font-size: 0.74rem;
+        }
+
+        .map {
+          min-height: 500px;
+        }
+
+        .country {
+          font-size: 0.72rem;
+        }
+
+        .button-row {
+          flex-direction: column;
+        }
+
+        .button {
+          width: 100%;
+        }
+
+        .badge {
+          width: 100%;
+          white-space: normal;
+        }
+
+        section {
+          padding: 1rem 0 3.4rem;
+        }
+
+        .card,
+        .stat-card,
+        .impact-card,
+        .future-card,
+        .visual-panel,
+        .cta-banner,
+        .champions-panel,
+        .teams-stage {
+          border-radius: 20px;
+        }
+
+        .teams-carousel-shell {
+          grid-template-columns: 1fr;
+        }
+
+        .champions-copy {
+          padding: 0.5rem;
+        }
+
+        .champions-visual img {
+          min-height: 340px;
+        }
+
+        .champions-highlight {
+          grid-template-columns: 1fr;
+        }
+
+        .teams-stage,
+        .teams-slide {
+          min-height: 420px;
+        }
+
+        .teams-image {
+          min-height: 300px;
+        }
+
+        .teams-nav {
+          width: 52px;
+          height: 52px;
+        }
+
+        .teams-nav-prev,
+        .teams-nav-next {
+          justify-self: center;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .hero-copy {
+          text-align: center;
+        }
+
+        .eyebrow,
+        .button-row {
+          justify-content: center;
+        }
+
+        .hero-grid {
+          gap: 1.25rem;
+          min-width: 620px;
+        }
+
+        .arena-core {
+          width: min(100%, 240px);
+        }
+
+        .node {
+          width: 64px;
+          padding: 0.38rem 0.3rem;
+          font-size: 0.54rem;
+          border-radius: 12px;
+        }
+
+        .panel-bottom,
+        .champions-highlight {
+          gap: 0.7rem;
+        }
+
+        .panel-stat,
+        .card,
+        .stat-card,
+        .impact-card,
+        .future-card,
+        .visual-panel,
+        .champions-panel {
+          padding: 1rem;
+        }
+
+        .champions-visual img,
+        .teams-image {
+          min-height: 260px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="../index.html" aria-label="Page d'accueil AFL">
+          <div class="brand-mark">AFL</div>
+          <div class="brand-text">
+            <strong>African League</strong>
+            <span>Mobile Legends Esports</span>
+          </div>
+        </a>
+        <div class="topbar-actions">
+          <nav class="nav" aria-label="Primary navigation">
+            <a href="../index.html">Accueil</a>
+            <a href="#season-1">Vue d'ensemble</a>
+            <a href="#representation">Representation</a>
+            <a href="../season-2/season2.html">Saison 2</a>
+            <a href="#impact">Resultats</a>
+          </nav>
+          <div class="lang-switch" aria-label="Language switcher">
+            <a class="lang-link" href="../../season-1/season1.html" lang="en">EN</a>
+            <a class="lang-link is-active" href="season1.html" lang="fr">FR</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-grid">
+          <div class="hero-copy reveal visible">
+            <div class="eyebrow">Vitrine De La Saison 1</div>
+            <h1>
+              AFL
+              <span>Saison 1</span>
+            </h1>
+            <p class="subheadline">
+              Une presentation dediee du tournoi qui a rassemble le talent
+              africain de Mobile Legends pendant quatre semaines de competition
+              structuree et intense.
+            </p>
+            <div class="tagline">Competition. Resilience. Elan Continental.</div>
+            <div class="button-row">
+              <a class="button button-primary" href="#season-1"
+                >Voir La Saison 1</a
+              >
+              <a class="button button-secondary" href="../index.html"
+                >Retour A L'Accueil</a
+              >
+            </div>
+          </div>
+
+          <div class="hero-panel reveal">
+            <div class="hero-panel-inner">
+              <div class="panel-top">
+                <div class="panel-chip">Ecosysteme Competitif Actif</div>
+                <div class="panel-chip">Afrique Connectee</div>
+              </div>
+              <div class="arena" aria-hidden="true">
+                <div class="arena-core">
+                  <div class="node">Ghana</div>
+                  <div class="node">Nigeria</div>
+                  <div class="node">Kenya</div>
+                  <div class="node">Cameroon</div>
+                  <div class="node">Senegal</div>
+                </div>
+              </div>
+              <div class="panel-bottom">
+                <div class="panel-stat">
+                  <strong>300+</strong>
+                  <span>Joueurs Mobilises</span>
+                </div>
+                <div class="panel-stat">
+                  <strong>10+</strong>
+                  <span>Pays Representes</span>
+                </div>
+                <div class="panel-stat">
+                  <strong>4</strong>
+                  <span>Semaines De Competition</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="champions-section reveal" id="champions">
+        <div class="section-inner">
+          <div class="champions-panel">
+            <div class="champions-visual">
+              <img
+                src="team_images/el-cartel-champions.png"
+                alt="EL CARTEL Season 1 champions poster"
+                title="EL CARTEL Season 1 champions poster"
+              />
+            </div>
+            <div class="champions-copy">
+              <div class="champions-kicker">Champions De La Saison 1</div>
+              <h2>
+                La Victoire Revient A
+                <span>EL CARTEL</span>
+              </h2>
+              <p>
+                EL CARTEL s'est impose au-dessus du plateau et a termine la
+                Saison 1 en champion, avec la maitrise, la puissance et la
+                regularite qui definissent le sommet de la competition.
+              </p>
+              <p>
+                Leur parcours vers le titre reste l'une des preuves les plus
+                fortes de ce que peut devenir la competition MLBB africaine
+                lorsque le talent rencontre l'ambition sur une scene continentale.
+              </p>
+              <div class="champions-highlight">
+                <div class="champions-stat">
+                  <strong>Champions</strong>
+                  <span>Vainqueurs du titre de la Saison 1 en representant le Nigeria.</span>
+                </div>
+                <div class="champions-stat">
+                  <strong>Moment Historique</strong>
+                  <span>Un resultat marquant dans le premier chapitre competitif de l'AFL.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="season-1">
+        <div class="section-inner">
+          <div class="section-head reveal">
+            <div class="section-copy">
+              <div class="section-kicker">Vue D'ensemble Du Tournoi</div>
+              <h2>AFL Saison 1</h2>
+              <p>
+                La Saison 1 de l'AFL a marque une etape majeure pour l'esport
+                africain, en reunissant des joueurs et des equipes de tout le
+                continent pendant quatre semaines de competition intense.
+              </p>
+              <p>
+                Malgre les defis d'infrastructure, le tournoi a montre avec succes
+                que l'Afrique est prete pour une competition esport de haut niveau.
+              </p>
+            </div>
+            <div class="badge">
+              Quatre semaines. Plusieurs regions. Une seule scene competitive.
+            </div>
+          </div>
+
+          <div class="season-layout">
+            <div class="stats-grid">
+              <article class="stat-card reveal">
+                <strong>300+</strong>
+                <span>Joueurs</span>
+              </article>
+              <article class="stat-card reveal">
+                <strong>10+</strong>
+                <span>Pays</span>
+              </article>
+              <article class="stat-card reveal">
+                <strong>4 Semaines</strong>
+                <span>De Competition</span>
+              </article>
+              <article class="stat-card reveal">
+                <strong>Multi-Serveurs</strong>
+                <span>Logistique Et Matchs</span>
+              </article>
+            </div>
+
+            <aside class="visual-panel reveal">
+              <div class="visual-tag">Format De La Saison</div>
+              <h3>Comment La Saison 1 A Fonctionne</h3>
+              <p>
+                La saison s'est deroulee comme une competition transfrontaliere
+                structuree sur quatre semaines, avec des equipes et des joueurs
+                coordonnes entre differentes regions et conditions de serveur.
+              </p>
+              <div class="server-map">
+                <div class="server-track" aria-hidden="true">
+                  <div class="server-line"></div>
+                  <div class="server-point"></div>
+                  <div class="server-point"></div>
+                  <div class="server-point"></div>
+                  <div class="server-point"></div>
+                </div>
+                <div class="server-labels">
+                  <span>Preparation</span>
+                  <span>Planning</span>
+                  <span>Matchs</span>
+                  <span>Resultats</span>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="representation">
+        <div class="section-inner">
+          <div class="section-head reveal">
+            <div class="section-copy">
+              <div class="section-kicker">Representation</div>
+              <h2>Un Continent. Une Competition.</h2>
+              <p>
+                La Saison 1 a reuni des joueurs venus de toute l'Afrique, faisant
+                de la representation un element central du tournoi. La competition
+                a connecte des communautes qui partagent rarement une meme scene
+                MLBB structuree.
+              </p>
+            </div>
+            <div class="badge">11 pays representes lors de la premiere saison</div>
+          </div>
+
+          <div class="cards">
+            <article class="card reveal">
+              <div class="icon">GH</div>
+              <h3>Afrique De L'Ouest</h3>
+              <p>Le Ghana, le Nigeria, le Senegal, le Mali, le Benin, la Guinee, le Togo et la Mauritanie ont pris part au tournoi.</p>
+            </article>
+            <article class="card reveal">
+              <div class="icon">CM</div>
+              <h3>Afrique Centrale</h3>
+              <p>Le Cameroun et le Congo ont apporte une forte presence regionale et enrichi les confrontations entre pays.</p>
+            </article>
+            <article class="card reveal">
+              <div class="icon">KE</div>
+              <h3>Afrique De L'Est</h3>
+              <p>La participation du Kenya a elargi la portee de la saison et renforce son caractere veritablement continental.</p>
+            </article>
+            <article class="card reveal">
+              <div class="icon">11</div>
+              <h3>Pays Representes</h3>
+              <p>Ghana, Nigeria, Cameroun, Kenya, Mauritanie, Senegal, Congo, Mali, Benin, Guinee et Togo.</p>
+            </article>
+            <article class="card reveal">
+              <div class="icon">ML</div>
+              <h3>Scene Partagee</h3>
+              <p>La Saison 1 a transforme la distance regionale en une experience de tournoi connectee autour de la competition.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="barriers">
+        <div class="section-inner">
+          <div class="section-head reveal">
+            <div class="section-copy">
+              <div class="section-kicker">Realite Du Terrain</div>
+              <h2>Briser Les Barrieres</h2>
+              <p>
+                L'esport africain fait toujours face a des defis uniques,
+                notamment l'absence d'un serveur dedie, ce qui cree des problemes
+                de latence et un desequilibre competitif.
+              </p>
+              <p>
+                Malgre cela, la Saison 1 de l'AFL a prouve la resilience et la
+                determination des joueurs africains.
+              </p>
+            </div>
+            <div class="badge">
+              Lucide sur les limites. Concentre sur la progression.
+            </div>
+          </div>
+
+          <div class="barrier-layout">
+            <div class="visual-panel reveal">
+              <div class="visual-tag">Realite Competitive</div>
+              <h3>L'Infrastructure Influence Les Resultats</h3>
+              <p>
+                L'integrite competitive depend de l'acces, de l'equite des
+                serveurs et d'une connectivite fiable. L'AFL n'ignore pas ces
+                problemes et les transforme en argument pour l'investissement.
+              </p>
+              <ul class="barrier-points">
+                <li>
+                  Limitations de serveur et de connectivite (50ms - 240ms)
+                  <span
+                    >Les joueurs concourent souvent dans des conditions de
+                    latence tres differentes.</span
+                  >
+                </li>
+                <li>
+                  Defis de coordination entre regions
+                  <span
+                    >Le planning, le routage serveur et l'equite des matchs
+                    restent difficiles a grande echelle.</span
+                  >
+                </li>
+                <li>
+                  Manques d'infrastructure dans l'esport africain
+                  <span
+                    >La croissance durable exige de meilleurs systemes, un soutien
+                    local plus fort et davantage de reconnaissance.</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <aside class="visual-panel reveal">
+              <div class="visual-tag">Fenetre De Latence</div>
+              <h3>De 50ms A 240ms</h3>
+              <p>
+                Le defi est reel, mais le signal l'est aussi : les joueurs se
+                sont presentes, se sont adaptes et ont livre une competition
+                continentale credible.
+              </p>
+              <div class="server-map">
+                <div class="server-track" aria-hidden="true">
+                  <div class="server-line"></div>
+                  <div
+                    class="server-point"
+                    style="left: 14%; background: var(--accent-3)"
+                  ></div>
+                  <div
+                    class="server-point"
+                    style="left: 31%; background: #7dffcb"
+                  ></div>
+                  <div
+                    class="server-point"
+                    style="left: 58%; background: #ffd166"
+                  ></div>
+                  <div
+                    class="server-point"
+                    style="left: 82%; background: var(--danger)"
+                  ></div>
+                </div>
+                <div class="server-labels">
+                  <span>50ms</span>
+                  <span>100ms</span>
+                  <span>180ms</span>
+                  <span>240ms</span>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="impact">
+        <div class="section-inner">
+          <div class="section-head reveal">
+            <div class="section-copy">
+              <div class="section-kicker">Resultats De La Saison</div>
+              <h2>Impact &amp; Realisations</h2>
+              <p>
+                La Saison 1 a montre qu'un tournoi MLBB continental pouvait
+                attirer une vraie participation, creer une collaboration
+                significative et justifier un renforcement de l'infrastructure esport.
+              </p>
+            </div>
+            <div class="badge">De la participation a la preuve du possible</div>
+          </div>
+
+          <div class="impact-grid">
+            <article class="impact-card reveal">
+              <strong>300+</strong>
+              <h3>Joueurs Competitifs Engages</h3>
+              <p>
+                Des centaines de joueurs ont rejoint une competition structuree
+                et ont gagne en visibilite dans un environnement de ligue partage.
+              </p>
+            </article>
+            <article class="impact-card reveal">
+              <strong>Cross-Country</strong>
+              <h3>Collaboration Renforcee</h3>
+              <p>
+                Des communautes de plusieurs nations ont ete reunies dans un
+                meme reseau competitif organise.
+              </p>
+            </article>
+            <article class="impact-card reveal">
+              <strong>Credible Platform</strong>
+              <h3>Scene MLBB Africaine Etablie</h3>
+              <p>
+                L'AFL a montre que l'Afrique peut accueillir une structure
+                competitive MLBB serieuse et reconnue.
+              </p>
+            </article>
+            <article class="impact-card reveal">
+              <strong>Investment Signal</strong>
+              <h3>Besoin D'Infrastructure Demontre</h3>
+              <p>
+                Le tournoi a clairement demontre le besoin de renforcer
+                l'infrastructure esport a travers le continent.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="teams-carousel-section reveal" id="teams-carousel">
+        <div class="section-inner">
+          <div class="section-head">
+            <div class="section-copy">
+              <div class="section-kicker">Equipes De La Saison 1</div>
+              <h2>Carrousel Des Equipes AFL Saison 1</h2>
+              <p>
+                Parcourez les equipes dont les visuels sont actuellement
+                disponibles dans le lineup de la Saison 1.
+              </p>
+            </div>
+            <div class="badge">Lineup complet de la Saison 1</div>
+          </div>
+
+          <div class="teams-carousel-shell">
+            <button
+              class="teams-nav teams-nav-prev"
+              type="button"
+              aria-label="Previous team"
+            >
+              &#10094;
+            </button>
+
+            <div class="teams-stage" aria-live="polite">
+              <div class="teams-slide is-active">
+                <!-- Replace with actual team image -->
+                <img
+                  src="team_images/troll-for-ever.png"
+                  alt="TROLL FOR EVER team image"
+                  title="TROLL FOR EVER team image"
+                  class="teams-image"
+                />
+                <div class="teams-meta">
+                  <p class="teams-label">Equipe A L'Honneur</p>
+                  <h3 class="teams-name">TROLL FOR EVER</h3>
+                  <p class="teams-country">Mauritania</p>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="teams-nav teams-nav-next"
+              type="button"
+              aria-label="Next team"
+            >
+              &#10095;
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <div class="brand" style="margin-bottom: 1rem">
+              <div class="brand-mark">AFL</div>
+              <div class="brand-text">
+                <strong>African League</strong>
+                <span>Esports For A New Era</span>
+              </div>
+            </div>
+            <p>
+              AFL is building a premium competitive future for African Mobile
+              Legends esports through structure, visibility, and relentless
+              community momentum.
+            </p>
+          </div>
+          <div class="footer-column">
+            <h3>Reseaux</h3>
+            <a
+              href="https://www.instagram.com/shyboy.pubg?igsh=MWgwMDlyOThra29mMg%3D%3D&utm_source=qr"
+              target="_blank"
+              rel="noreferrer"
+              >Instagram</a
+            >
+            <a
+              href="https://discord.gg/GzRzxbJ5X"
+              target="_blank"
+              rel="noreferrer"
+              >Discord</a
+            >
+            <a
+              href="https://www.tiktok.com/@aflofficial_mlbb?_r=1&_t=ZS-950uGTfEmaS"
+              target="_blank"
+              rel="noreferrer"
+              >TikTok</a
+            >
+          </div>
+          <div class="footer-column">
+            <h3>Contact</h3>
+            <a href="mailto:afrofamlegends@gmail.com"
+              >afrofamlegends@gmail.com</a
+            >
+          </div>
+          <div class="footer-column">
+            <h3>Credits</h3>
+            <p>Website by JESSE-LINDEN ASARE JOSEPH</p>
+            <p>REPORT BY EDMUND ADDO MENSAH</p>
+            <p>AFL © 2026. Reimagining African Esports.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const reveals = document.querySelectorAll(".reveal");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.16,
+          rootMargin: "0px 0px -40px 0px",
+        }
+      );
+
+      reveals.forEach((element) => {
+        if (!element.classList.contains("visible")) {
+          observer.observe(element);
+        }
+      });
+
+      const teams = [
+        {
+          name: "TROLL FOR EVER",
+          country: "Mauritania",
+          image: "team_images/troll-for-ever.png",
+        },
+        {
+          name: "META ESPORTS",
+          country: "Benin",
+          image: "team_images/meta-esports.png",
+        },
+        {
+          name: "VOID ARISE",
+          country: "Senegal",
+          image: "team_images/void-arise.png",
+        },
+        {
+          name: "RUUTZ ESPORTS",
+          country: "Ghana",
+          image: "team_images/ruutz-esports.png",
+        },
+        {
+          name: "PLAGUE OF DEATH",
+          country: "Mali",
+          image: "team_images/plague-of-death.png",
+        },
+        {
+          name: "VIPER7 (V7)",
+          country: "Senegal",
+          image: "team_images/viper7-v7.png",
+        },
+        {
+          name: "GPOW XTREMEX",
+          country: "Ghana",
+          image: "team_images/gpow-xtremex.png",
+        },
+        {
+          name: "EL CARTEL",
+          country: "Nigeria",
+          image: "team_images/el-cartel.png",
+        },
+        {
+          name: "SHDW II",
+          country: "Guinea",
+          image: "team_images/shdw-ii.png",
+        },
+        {
+          name: "DARKHORSE",
+          country: "Ghana",
+          image: "team_images/darkhorse.png",
+        },
+        {
+          name: "EXYLUM OF ABYSS",
+          country: "Congo",
+          image: "team_images/exylum-of-abyss.png",
+        },
+        {
+          name: "LOYAL KINGS",
+          country: "Senegal",
+          image: "team_images/loyal-kings.png",
+        },
+        {
+          name: "ETERNUM ESPORTS",
+          country: "Togo",
+          image: "team_images/eternum-esports.png",
+        },
+        {
+          name: "AURA 233",
+          country: "Ghana",
+          image: "team_images/aura-233.png",
+        },
+        {
+          name: "RUBAN ROUGE",
+          country: "Congo",
+          image: "team_images/ruban-rouge.png",
+        },
+        {
+          name: "TRIBE",
+          country: "Kenya",
+          image: "team_images/tribe.png",
+        },
+        {
+          name: "DYNASTIE X",
+          country: "Senegal",
+          image: "team_images/dynastie-x.png",
+        },
+        {
+          name: "GALE SQUAD MLB",
+          country: "Cameroon",
+          image: "team_images/gale-squad-mlb.png",
+        },
+        {
+          name: "KOCC ESPORTS",
+          country: "Senegal",
+          image: "team_images/kocc-esports.png",
+        },
+        {
+          name: "LEGENDS OF NIGER",
+          country: "Niger",
+          image: "team_images/legends-of-niger.png",
+        },
+      ];
+
+      (() => {
+        const stage = document.querySelector(".teams-stage");
+        const prevButton = document.querySelector(".teams-nav-prev");
+        const nextButton = document.querySelector(".teams-nav-next");
+
+        if (!stage || !prevButton || !nextButton) return;
+
+        let currentIndex = 0;
+        let touchStartX = 0;
+        let touchEndX = 0;
+        let isAnimating = false;
+        let autoRotateId;
+
+        function startAutoRotate() {
+          clearInterval(autoRotateId);
+          autoRotateId = setInterval(() => {
+            showNextTeam(false);
+          }, 4000);
+        }
+
+        function renderTeam(index) {
+          if (isAnimating) return;
+          isAnimating = true;
+
+          const team = teams[index];
+          const currentSlide = stage.querySelector(".teams-slide");
+
+          if (currentSlide) {
+            currentSlide.classList.add("is-changing");
+          }
+
+          setTimeout(() => {
+            stage.innerHTML = `
+              <div class="teams-slide is-active">
+                <!-- Replace with actual team image -->
+                <img src="${team.image}" alt="${team.name} team image" title="${team.name} team image" class="teams-image" />
+                <div class="teams-meta">
+                  <p class="teams-label">Equipe A L'Honneur</p>
+                  <h3 class="teams-name">${team.name}</h3>
+                  <p class="teams-country">${team.country}</p>
+                </div>
+              </div>
+            `;
+
+            requestAnimationFrame(() => {
+              const newSlide = stage.querySelector(".teams-slide");
+              if (newSlide) {
+                newSlide.classList.remove("is-changing");
+              }
+              isAnimating = false;
+            });
+          }, 220);
+        }
+
+        function showNextTeam(resetTimer = true) {
+          currentIndex = (currentIndex + 1) % teams.length;
+          renderTeam(currentIndex);
+          if (resetTimer) startAutoRotate();
+        }
+
+        function showPrevTeam(resetTimer = true) {
+          currentIndex = (currentIndex - 1 + teams.length) % teams.length;
+          renderTeam(currentIndex);
+          if (resetTimer) startAutoRotate();
+        }
+
+        prevButton.addEventListener("click", showPrevTeam);
+        nextButton.addEventListener("click", showNextTeam);
+
+        stage.addEventListener(
+          "touchstart",
+          (event) => {
+            touchStartX = event.changedTouches[0].clientX;
+          },
+          { passive: true }
+        );
+
+        stage.addEventListener(
+          "touchend",
+          (event) => {
+            touchEndX = event.changedTouches[0].clientX;
+            const swipeDistance = touchEndX - touchStartX;
+
+            if (Math.abs(swipeDistance) < 40) return;
+
+            if (swipeDistance < 0) {
+              showNextTeam();
+            } else {
+              showPrevTeam();
+            }
+          },
+          { passive: true }
+        );
+
+        startAutoRotate();
+      })();
+    </script>
+  </body>
+</html>
