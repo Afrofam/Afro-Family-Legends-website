@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AFL Saison 2 | Inscriptions Ouvertes</title>
+    <meta
+      name="description"
+      content="Les inscriptions pour la saison 2 de l’AFL sont ouvertes sur les serveurs Nigeria et Europe, avec plus de 200 équipes attendues à travers l’Afrique."
+    />
+    <link rel="icon" type="image/png" href="../../favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #060816;
+        --panel: rgba(11, 18, 37, 0.84);
+        --text: #edf3ff;
+        --muted: #a5b4db;
+        --accent: #ffd447;
+        --accent-2: #2bd4ff;
+        --accent-3: #7b5cff;
+        --border: rgba(255, 255, 255, 0.1);
+        --shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+        --max-width: 1180px;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+      body {
+        margin: 0;
+        font-family: "Space Grotesk", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(43, 212, 255, 0.2), transparent 28%),
+          radial-gradient(circle at top right, rgba(255, 212, 71, 0.2), transparent 30%),
+          radial-gradient(circle at 50% 120%, rgba(123, 92, 255, 0.14), transparent 35%),
+          #07101f;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+      a { color: inherit; text-decoration: none; }
+      .topbar { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(18px); background: rgba(5, 8, 18, 0.72); border-bottom: 1px solid rgba(255,255,255,0.06); }
+      .topbar-inner, .section-inner, .footer-inner { width: min(calc(100% - 2rem), var(--max-width)); margin: 0 auto; }
+      .topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 74px; }
+      .brand { display: flex; align-items: center; gap: 0.9rem; font-family: "Oxanium", sans-serif; letter-spacing: 0.06em; }
+      .brand-mark { width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center; font-weight: 800; color: #fff; background: linear-gradient(145deg, rgba(123,92,255,0.95), rgba(43,212,255,0.9)); }
+      .brand-text strong { display: block; font-size: 1rem; }
+      .brand-text span { display: block; color: var(--muted); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.18em; }
+      .topbar-actions, .nav, .button-row { display: flex; align-items: center; }
+      .topbar-actions { gap: 1rem; }
+      .nav { gap: 1.2rem; color: var(--muted); font-size: 0.95rem; }
+      .lang-switch { display: inline-flex; gap: 0.35rem; padding: 0.35rem; border-radius: 999px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); }
+      .lang-link { min-width: 42px; padding: 0.45rem 0.7rem; border-radius: 999px; text-align: center; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+      .lang-link.is-active { color: #08111c; background: linear-gradient(120deg, rgba(255,212,71,0.95), rgba(43,212,255,0.9)); }
+      .hero { padding: 5.4rem 0 4rem; }
+      .hero-grid, .server-grid, .feature-grid, .steps-grid, .footer-grid { display: grid; gap: 1.2rem; }
+      .hero-grid { width: min(calc(100% - 2rem), var(--max-width)); margin: 0 auto; grid-template-columns: 1.05fr 0.95fr; align-items: center; }
+      .eyebrow, .section-kicker { display: inline-flex; align-items: center; gap: 0.55rem; color: #fff6cd; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; }
+      .eyebrow::before, .section-kicker::before { content: ""; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); }
+      h1, h2, h3 { margin: 0; font-family: "Oxanium", sans-serif; line-height: 0.95; text-transform: uppercase; }
+      h1 { margin-top: 1.1rem; font-size: clamp(3rem, 8vw, 6rem); }
+      h1 span { display: block; background: linear-gradient(90deg, #fffef5 0%, #ffe486 45%, #6fdfff 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .hero-copy p, .section-copy p, .server-card p, .feature-card p, .step-card p, .cta-banner p, .footer-column p, .footer-column a { color: var(--muted); }
+      .hero-copy p { max-width: 42rem; font-size: 1.05rem; }
+      .button-row { flex-wrap: wrap; gap: 1rem; margin-top: 1.8rem; }
+      .button { display: inline-flex; align-items: center; justify-content: center; min-height: 54px; padding: 0.9rem 1.4rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.09); font-weight: 700; }
+      .button-primary { background: linear-gradient(120deg, rgba(255,212,71,0.95), rgba(43,212,255,0.9)); color: #08111c; }
+      .button-secondary { background: rgba(255,255,255,0.04); }
+      .hero-panel, .feature-card, .server-card, .step-card, .cta-banner { border-radius: 26px; border: 1px solid var(--border); background: var(--panel); box-shadow: var(--shadow); }
+      .hero-panel, .feature-card, .server-card, .step-card { padding: 1.4rem; }
+      .panel-top, .panel-bottom { display: grid; gap: 0.9rem; }
+      .panel-top { grid-template-columns: repeat(2, minmax(0,1fr)); margin-bottom: 1rem; }
+      .panel-chip, .panel-stat { padding: 0.95rem; border-radius: 18px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); }
+      .panel-chip strong, .panel-stat strong { display: block; margin-bottom: 0.35rem; font-size: 1.25rem; }
+      section { padding: 1rem 0 4.6rem; }
+      .section-head { margin-bottom: 2rem; }
+      .section-copy h2 { font-size: clamp(2rem, 5vw, 3.5rem); margin-top: 0.7rem; }
+      .feature-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+      .feature-card h3, .server-card h3, .step-card h3 { font-size: 1.2rem; margin-bottom: 0.75rem; }
+      .server-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .steps-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+      .cta-banner { padding: 2rem; background: radial-gradient(circle at left center, rgba(255,212,71,0.16), transparent 28%), radial-gradient(circle at right center, rgba(43,212,255,0.14), transparent 28%), var(--panel); }
+      footer { padding: 1rem 0 2.5rem; }
+      .footer-inner { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.6rem; }
+      .footer-grid { grid-template-columns: 1.4fr repeat(3, 1fr); align-items: start; }
+      .footer-column h3 { font-size: 1rem; margin-bottom: 0.8rem; }
+      @media (max-width: 1100px) { .hero-grid, .feature-grid, .server-grid, .steps-grid, .footer-grid { grid-template-columns: 1fr; } .nav { display: none; } .topbar-actions { margin-left: auto; } }
+      @media (max-width: 720px) { .topbar-inner, .section-inner, .footer-inner { width: min(calc(100% - 1.25rem), var(--max-width)); } .button-row { flex-direction: column; } .button { width: 100%; } .lang-link { min-width: 38px; padding: 0.38rem 0.55rem; } .hero { padding: 3.6rem 0 2.8rem; } .hero-panel, .feature-card, .server-card, .step-card, .cta-banner { border-radius: 20px; } }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="../index.html" aria-label="Page d’accueil AFL">
+          <div class="brand-mark">AFL</div>
+          <div class="brand-text">
+            <strong>African League</strong>
+            <span>Mobile Legends Esports</span>
+          </div>
+        </a>
+        <div class="topbar-actions">
+          <nav class="nav" aria-label="Navigation principale">
+            <a href="../index.html">Accueil</a>
+            <a href="../season-1/season1.html">Saison 1</a>
+            <a href="#servers">Serveurs</a>
+            <a href="#register">Inscription</a>
+          </nav>
+          <div class="lang-switch" aria-label="Sélecteur de langue">
+            <a class="lang-link" href="../../season-2/season2.html" lang="en">EN</a>
+            <a class="lang-link is-active" href="season2.html" lang="fr">FR</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow">Inscriptions ouvertes</div>
+            <h1>
+              AFL Saison 2
+              <span>Nigeria & Europe</span>
+            </h1>
+            <p>
+              Vous avez aimé la saison 1 de l’AFL ? La saison 2 est là, et cette
+              fois plus de 200 équipes sont attendues à travers l’Afrique pour ce
+              qui s’annonce comme la plus grande compétition Mobile Legends du
+              continent.
+            </p>
+            <p>
+              Choisissez votre serveur, Nigeria ou Europe, et préparez-vous à
+              rejoindre la prochaine étape de la compétition AFL.
+            </p>
+            <div class="button-row">
+              <a class="button button-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfsEcncozSYFNJT-q00t_bWeG6YgKWCBGeqH_IXhYolmEs8pA/viewform?usp=publish-editor" target="_blank" rel="noreferrer">S’inscrire maintenant</a>
+              <a class="button button-secondary" href="../index.html">Retour à l’accueil</a>
+            </div>
+          </div>
+          <div class="hero-panel">
+            <div class="panel-top">
+              <div class="panel-chip"><strong>200+</strong><span>Équipes attendues</span></div>
+              <div class="panel-chip"><strong>2</strong><span>Serveurs disponibles</span></div>
+            </div>
+            <div class="panel-bottom">
+              <div class="panel-stat"><strong>Serveur Nigeria</strong><span>Une voie d’entrée pensée pour les équipes choisissant le serveur Nigeria.</span></div>
+              <div class="panel-stat"><strong>Serveur Europe</strong><span>Une alternative compétitive pour les équipes inscrites sur le serveur Europe.</span></div>
+              <div class="panel-stat"><strong>Portée continentale</strong><span>De l’Afrique australe à l’Afrique de l’Ouest et de l’Est, le plateau s’élargit.</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-inner">
+          <div class="section-head">
+            <div class="section-copy">
+              <div class="section-kicker">Nouveauté</div>
+              <h2>La Plus Grande AFL À Ce Jour</h2>
+              <p>
+                La saison 2 élargit l’ambition de l’AFL avec plus de participants,
+                une portée régionale plus forte et une vision encore plus claire
+                pour l’écosystème compétitif africain de MLBB.
+              </p>
+            </div>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card"><h3>Plus de 200 équipes</h3><p>La saison 2 est conçue pour accueillir un plateau bien plus important que la première saison.</p></article>
+            <article class="feature-card"><h3>Portée régionale élargie</h3><p>Des équipes de toute l’Afrique peuvent se préparer pour un tournoi pensé à l’échelle continentale.</p></article>
+            <article class="feature-card"><h3>Choix du serveur</h3><p>Les inscriptions sont ouvertes pour les équipes choisissant le serveur Nigeria ou Europe.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="servers">
+        <div class="section-inner">
+          <div class="section-head">
+            <div class="section-copy">
+              <div class="section-kicker">Options de serveur</div>
+              <h2>Choisissez Votre Serveur</h2>
+              <p>Choisissez le serveur qui convient le mieux à votre équipe avant le début du tournoi.</p>
+            </div>
+          </div>
+          <div class="server-grid">
+            <article class="server-card"><h3>Serveur Nigeria</h3><p>Inscrivez-vous sur le serveur Nigeria si cette option donne à votre équipe de meilleures conditions compétitives.</p></article>
+            <article class="server-card"><h3>Serveur Europe</h3><p>Inscrivez-vous sur le serveur Europe si cette voie correspond mieux à votre roster et à votre préparation.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-inner">
+          <div class="section-head">
+            <div class="section-copy">
+              <div class="section-kicker">Comment rejoindre</div>
+              <h2>Étapes D’Inscription</h2>
+              <p>Le processus est simple : ouvrez le formulaire, choisissez votre serveur et préparez votre équipe.</p>
+            </div>
+          </div>
+          <div class="steps-grid">
+            <article class="step-card"><h3>1. Ouvrir le formulaire</h3><p>Accédez au formulaire officiel d’inscription de l’AFL Saison 2.</p></article>
+            <article class="step-card"><h3>2. Choisir votre serveur</h3><p>Sélectionnez Nigeria ou Europe pendant l’inscription.</p></article>
+            <article class="step-card"><h3>3. Préparer la compétition</h3><p>Finalisez votre roster et préparez-vous pour le lancement du tournoi.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="register">
+        <div class="section-inner">
+          <div class="cta-banner">
+            <div class="section-copy">
+              <div class="section-kicker">Entrée Saison 2</div>
+              <h2>Inscrivez Votre Équipe</h2>
+              <p>Inscrivez-vous maintenant et rejoignez ce qui pourrait devenir le plus grand tournoi Mobile Legends d’Afrique.</p>
+            </div>
+            <div class="button-row">
+              <a class="button button-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfsEcncozSYFNJT-q00t_bWeG6YgKWCBGeqH_IXhYolmEs8pA/viewform?usp=publish-editor" target="_blank" rel="noreferrer">Ouvrir le formulaire</a>
+              <a class="button button-secondary" href="mailto:afrofamlegends@gmail.com">Contacter AFL</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div class="footer-column"><h3>AFL</h3><p>L’AFL construit un avenir continental plus fort pour la compétition MLBB africaine grâce à la structure, l’accès et l’élan communautaire.</p></div>
+          <div class="footer-column"><h3>Réseaux</h3><a href="https://www.instagram.com/shyboy.pubg?igsh=MWgwMDlyOThra29mMg%3D%3D&utm_source=qr" target="_blank" rel="noreferrer">Instagram</a><a href="https://discord.gg/GzRzxbJ5X" target="_blank" rel="noreferrer">Discord</a><a href="https://www.tiktok.com/@aflofficial_mlbb?_r=1&_t=ZS-950uGTfEmaS" target="_blank" rel="noreferrer">TikTok</a></div>
+          <div class="footer-column"><h3>Contact</h3><a href="mailto:afrofamlegends@gmail.com">afrofamlegends@gmail.com</a></div>
+          <div class="footer-column"><h3>Crédits</h3><p>Website by JESSE-LINDEN ASARE JOSEPH</p><p>REPORT BY EDMUND ADDO MENSAH</p></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
