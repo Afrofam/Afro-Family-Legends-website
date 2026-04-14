@@ -1464,19 +1464,17 @@
 
         .hero {
           padding: 3.4rem 0 2.5rem;
-          overflow-x: auto;
-          overflow-y: visible;
-          -webkit-overflow-scrolling: touch;
         }
 
         .hero-grid {
-          width: max-content;
-          min-width: 680px;
-          padding: 0 0.625rem 0.5rem;
+          width: 100%;
+          min-width: 0;
+          grid-template-columns: 1fr;
+          padding: 0;
         }
 
         .hero-copy h1 {
-          font-size: clamp(2.8rem, 18vw, 4.4rem);
+          font-size: clamp(2.3rem, 12vw, 4rem);
         }
 
         .hero-copy .subheadline,
@@ -1484,6 +1482,16 @@
         .champions-copy p,
         .teams-country {
           font-size: 0.96rem;
+        }
+
+        .hero-copy,
+        .hero-panel {
+          min-width: 0;
+        }
+
+        .tagline {
+          font-size: 0.72rem;
+          letter-spacing: 0.16em;
         }
 
         .eyebrow {
@@ -1613,17 +1621,16 @@
 
         .hero-grid {
           gap: 1.25rem;
-          min-width: 620px;
         }
 
         .arena-core {
-          width: min(100%, 240px);
+          width: min(100%, 220px);
         }
 
         .node {
-          width: 64px;
-          padding: 0.38rem 0.3rem;
-          font-size: 0.54rem;
+          width: 58px;
+          padding: 0.32rem 0.22rem;
+          font-size: 0.48rem;
           border-radius: 12px;
         }
 
